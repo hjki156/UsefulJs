@@ -2,7 +2,7 @@
 |*|有用的js函数  useful js functions
 |*|鹤霁制作	  made by hjki(darryl)
 |*|2022.1.1
-|*|修改于2020.3.9
+|*|修改于2020.3.12
 \*/
 var Auxiliaries = {
 dpiPpi: function(Width, Height, Inch) {
