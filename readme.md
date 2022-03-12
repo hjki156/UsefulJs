@@ -18,7 +18,7 @@
 #### 0. 引用（原生引入）
 下载发行版本
 ```html
-<script src="Useful-xxx.js"></script>
+<script src="UsefulVxxx.js"></script>
 ```
 #### 1. 隐藏与显示元素
 ```js
