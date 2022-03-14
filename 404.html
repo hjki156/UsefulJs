@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html />
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, target-densitydpi=device-dpi"/>
+<title>...</title>
+<!--<link rel="stylesheet" type="text/css" href="http://hjki.atwebpages.com/css/page.css">-->
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff url(./bk.jpg) no-repeat fixed;
+	background-size:auto 100%;
+	color: #4E4848;
+}
+a {
+	text-decoration: none;
+	color: #FF0086;
+}
+a:hover {
+	text-decoration: underline
+}
+p {
+	text-indent: 2em;
+}
+h1 {
+	color: #15D97F;
+	font-size: 50vw;
+	text-align: center;
+	margin: 0;
+}
+h2::before {
+	content: "⚝";
+	color: #FFE931;
+	font-size: 1.27em;
+}
+h2 {
+	border-bottom: 2px solid #949494;
+	margin: 6.18%;
+	color: #00C767;
+}
+.view {
+	border-radius: 5px;
+	padding:2.5%;
+	background: url();
+	box-shadow: 0 0 1.5em -1em #8C8C8C, 0 0 .2em #8C8C8C;
+	margin:3.5% 3.5%;
+}
+.top {
+	float: left;
+	display: inline;
+}
+.oma, .kma ,.check {
+	float: left;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #DDD;
+	padding: .314em;
+	margin: 0 .0618em;
+}
+.oma {border-radius: 50%;}
+.kma, .check {border-radius: 25%;}
+.check {
+	padding: 0;
+	font-size: .528em;
+}
+</style>
+</head>
+<body>
+<h1>404</h1>
+<div class="view"> 
+	<div class="top"><span class="kma"></span><span class="oma"></span><span class="oma"></span></div>
+	<p>无法找到您查找的页面，或许它已经被移除或者被迁移，<a href="https://hjki156.github.io/UsefulJs">点此返回</a></p>
+</div>
+<script type="text/javascript" >
+var keyWords = "	404	";//标题字符串
+function titleChange() {
+	var keyList = keyWords.split("");
+	var firstChar = keyList.shift();
+	keyList.push(firstChar);
+	keyWords = keyList.join("");
+	document.title = keyWords;
+}
+setInterval(titleChange, 500);
+var hrs = document.getElementsByTagName("hr");
+function anm() {
+	if(hrs.length == 0) return;
+	hrs[i].style.marginLeft = "10%";
+	i++;
+	if(i<hrs.length) setTimeout(anm, 309);
+}
+window.onload = function() {
+	i = 0;
+	anm();
+};
+</script>
+</body>
+</html>
