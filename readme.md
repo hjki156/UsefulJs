@@ -53,7 +53,7 @@ Darryl.fadeIn("元素id", 1000)
 
 #### 5. 渐入式状态栏
 ```js
-Darryl.fadeBar("元素id", #FFFFFF, #000000)
+Darryl.fadeBar("元素id", "#FFFFFF", "#000000")
 ```
 第一个16进制颜色值代表状态栏背景色，第二个则为文字颜色。
 这两个值是可选的。
