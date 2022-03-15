@@ -39,7 +39,7 @@ Darryl.annotation();
 
 ```js
 Darryl.modalAlert("./modal.css");
-/*其中的url是可选的，建站请下载modal.css，然后输入文件url*/
+/*其中的url是可选的，建站请下载modalAlert.css，然后输入文件url*/
 ```
 使用后，`alert`方法将被改为`alert("文本", "标题");`
 其中标题是可选的。
