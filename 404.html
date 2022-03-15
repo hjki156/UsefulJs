@@ -46,6 +46,29 @@ h2 {
 	box-shadow: 0 0 1.5em -1em #8C8C8C, 0 0 .2em #8C8C8C;
 	margin:3.5% 3.5%;
 }
+hr {
+	position: relative;
+	display: block;
+	height: 0;
+	margin: 1.5em;
+	margin-left: 95%;
+	margin-right: calc(10% - 1em);
+	border-style: dotted none none none ;
+	border-color: #ADADAD;
+	border-width: 1.2px;
+	overflow: visible;
+	transition: margin .618s;
+}
+hr::after {
+	display: block;
+	text-align: center;
+	content: "✎";
+	font-size: 2vh;
+	color: #ADADAD;
+	position: absolute;
+	top: calc(-1em - 1px);
+	left: -1em;
+}
 .top {
 	float: left;
 	display: inline;
@@ -69,8 +92,12 @@ h2 {
 <body>
 <h1>404</h1>
 <div class="view"> 
-	<div class="top"><span class="kma"></span><span class="oma"></span><span class="oma"></span></div>
-	<p>无法找到您查找的页面，或许它已经被移除或者被迁移，<a href="https://hjki156.github.io/UsefulJs">点此返回</a></p>
+<div class="top"><span class="kma"></span><span class="oma"></span><span class="oma"></span></div>
+<p>无法找到您查找的页面，或许它已经被移除或者被迁移。</p>
+<hr><ul>
+<li><a href="https://hjki156.github.io/UsefulJs">点此返回</a></li>
+<li>或者创建一个<a href="https://github.com/hjki156/UsefulJs/issues">lssues</a></li>
+</ul>
 </div>
 <script type="text/javascript" >
 var keyWords = "	404	";//标题字符串
