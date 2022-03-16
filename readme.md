@@ -23,7 +23,7 @@
 ```js
 Darryl.objHid("元素id");
 ```
--->[demo](//hjki.github.io/UsefulJs/demo/objHid.html)
+-->[demo](//hjki156.github.io/UsefulJs/demo/objHid.html)
 #### 2. 使用新的注释标识符
 函数不会自动执行，
 需要将代码写入页面的.js文件中或者`<style>`标签下。
