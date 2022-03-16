@@ -1,0 +1,24 @@
+body {
+	color: #0A4E4E;
+	background: #FAFEFE
+}
+button {
+	background: #EEE;
+	border: 0;
+	border-left: #0E6C6C solid 2px;
+	border-right: #0E6C6C solid 2px;
+	border-radius: 2px;
+	color: #0A4E4E;
+	padding: .25em;
+}
+button:active {
+	background: #D9D9D9
+}
+h1 {
+	text-align: left;
+	font-size: 2em;
+	border-bottom: #0E6C6C solid 2px;
+}
+p {
+	white-space: pre-line
+}
