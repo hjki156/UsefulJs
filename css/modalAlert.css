@@ -20,9 +20,6 @@
 	box-shadow: 0 0 100vh #fff;
 	background: white;
 }
-.darryl-mask:target {
-	display: block;
-}
 .darryl-modal #darryl-modal-title {
 	margin: 0;
 	top: 0;
