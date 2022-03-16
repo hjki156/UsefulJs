@@ -44,7 +44,7 @@ Darryl.modalAlert("./modal.css");
 ```
 使用后，`alert`方法将被改为`alert("文本", "标题");`
 其中标题是可选的。
-
+-->[demo](//hjki156.github.io/UsefulJs/demo/modalAlert.html)
 #### 4. 渐入式效果
 ```js
 Darryl.fadeIn("元素id", 1000)
