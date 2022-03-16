@@ -2,7 +2,7 @@
 |*|有用的js函数  useful js functions
 |*|鹤霁制作	  made by hjki(darryl)
 |*|2022.1.1
-|*|修改于2020.3.9
+|*|修改于2020.3.16
 \*/
 var Auxiliaries = {
 dpiPpi: function(Width, Height, Inch) {
@@ -87,15 +87,15 @@ annotation : function() {
 /*|3.自定义弹窗
 |*|2022-3-10 将模态框id与class进行调整，防止出现冲突
 |*|2022-3-12 更改页面滑动方法以适配不同机型
+|*|2022-3-16 修改弹窗加载方法
 |*/
 modalAlert : function(url) {
-	if (!url) url = "https://haidixiong.gitee.io/jialexiong/modal.css";
+	if (!url) url = "https://hjki156.github.io/UsefulJs/css/modalAlert.css";
 	console.log(url);
 	var link = document.createElement("link");
 	link.rel = "stylesheet";
 	link.type = "text/css";
 	link.href = url;
-	link.onload = function() {document.body.innerHTML += code};
 	var code = "\
 <div class=\"darryl-mask\" id=\"darryl-mask\">\n\
 <div class=\"darryl-modal\">\n\
@@ -106,39 +106,38 @@ modalAlert : function(url) {
 </div>\n\
 </div>";
 	document.body.appendChild(link);
-	window.alert = function(str, title) {
-		var onlyOne;
-		title = title||"弹窗";
-		var ok = document.getElementById("darryl-modal-ok");
-		var close = document.getElementById("darryl-modal-close");
-		close.style.display = "block";
-		ok.style.width = "50vw";
-		ok.style.borderBottomLeftRadius = "0";
-		if (!onlyOne) {
-			ok.style.width = "100%";
-			ok.style.borderBottomLeftRadius = "1vh";
-			close.style.display = "none";
-		}
-		document.body.style.overflow="hidden";
-		ok.addEventListener("click", function(e) {
-			setTimeout(function() {
-				if (testPos){
-					document.documentElement.scrollTop = lastPos;
-				}else{
-					document.body.scrollTop = lastPos;
-				}
+	Darryl.alert = function(str) {window.alert(str);}
+	link.onload = function() {
+		document.body.innerHTML += code;
+		Darryl.alert = function(str, title) {
+			var onlyOne;
+			title = title||"弹窗";
+			var ok = document.getElementById("darryl-modal-ok");
+			var close = document.getElementById("darryl-modal-close");
+			var titleObj = document.getElementById("darryl-modal-title");
+			var contentObj = document.getElementById("darryl-modal-content");
+			close.style.display = "block";
+			ok.style.width = "50vw";
+			ok.style.borderBottomLeftRadius = "0";
+			if (!onlyOne) {
+				ok.style.width = "100%";
+				ok.style.borderBottomLeftRadius = "1vh";
+				close.style.display = "none";
+			}
+			document.body.style.overflow="hidden";
+			ok.addEventListener("click", function(e) {
+				e.preventDefault();
+				Darryl.setCss("darryl-mask", "display", "none");
 				document.body.style.overflow="";
-			},.1);
-		});
-		var titleObj = document.getElementById("darryl-modal-title");
-		var contentObj = document.getElementById("darryl-modal-content");
-		titleObj.innerHTML = title;
-		contentObj.innerHTML = str;
-		lastPos = window.pageYOffset;
-		testPos = document.documentElement.scrollTop;
-		window.location.replace("#darryl-mask");
-		massage = "内容：" + str + " 标题：" + title + " 坐标：" + lastPos;
-		return massage;
+			});
+			titleObj.innerHTML = title;
+			contentObj.innerHTML = str;
+			lastPos = window.pageYOffset;
+			testPos = document.documentElement.scrollTop;
+			Darryl.setCss("darryl-mask", "display", "block");
+			massage = "内容：" + str + " 标题：" + title + " 坐标：" + lastPos;
+			return massage;
+		}
 	}
 },
 /*4.渐入式效果*/
