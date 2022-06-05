@@ -21,7 +21,7 @@
 ```
 #### 1. 隐藏与显示元素
 ```js
-Darryl.objHid("元素id");
+Darryl.objHid('元素id');
 ```
 -->[demo](//hjki156.github.io/UsefulJs/demo/objHid.html)
 #### 2. 使用新的注释标识符
@@ -39,27 +39,27 @@ Darryl.annotation();
 需要将代码写入页面的.js文件中或者`<style>`标签下。
 
 ```js
-Darryl.modalAlert("./modal.css");
+Darryl.modalAlert('./modal.css');
 /*其中的url是可选的，建站请下载modalAlert.css，然后输入文件url*/
 ```
-使用后，`alert`方法将被改为`alert("文本", "标题");`
+使用后，增加了`Darryl.alert('文本', '标题')`和`Darryl.warn('文本', '标题')`
 其中标题是可选的。
 
 -->[demo](//hjki156.github.io/UsefulJs/demo/modalAlert.html)
 #### 4. 渐入式效果
 ```js
-Darryl.fadeIn("元素id", 1000)
+Darryl.fadeIn('元素id', 1000)
 //后面的数字是延迟时间
 ```
 如果在元素被加载出来前使用可能会产生一个无法找到元素的错误
 
 #### 5. 渐入式状态栏
 ```js
-Darryl.fadeBar("元素id", "#FFFFFF", "#000000")
+Darryl.fadeBar('元素id', '#FFFFFF', '#000000')
 ```
 第一个16进制颜色值代表状态栏背景色，第二个则为文字颜色。
 这两个值是可选的。
 
-…（以后再写吧，我好懒![滑稽](http://qzonestyle.gtimg.cn/qzone/em/e248.gif)）
+…（以后再写吧，我好懒!）
 ## 为什么要做这个？
 为了我可爱的姐姐能更好的开发html页面，因此方法大多简单粗暴。
